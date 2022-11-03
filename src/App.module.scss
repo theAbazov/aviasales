@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #4a4a4a;
+  background-color: #f3f7fa;
+}
+
+.container {
+  max-width: 755px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main {
+  position: relative;
+}
+
+.content {
+  display: flex;
+  align-items: start;
+  padding-bottom: 50px;
+  &__tabs {
+    flex: 1 1 auto;
+    &-wrapper {
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+  }
+  &__tab {
+    flex: 0 0 33.333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #dfe5ec;
+    cursor: url('./assets/img/cursor.svg') auto;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus,
+    &.content__tab--active {
+      background-color: #2196f3;
+      color: #fff;
+    }
+    &:first-child {
+      -webkit-border-radius: 5px 0 0 5px;
+      -moz-border-radius: 5px 0 0 5px;
+      border-radius: 5px 0 0 5px;
+      border-right: none;
+    }
+    &:last-child {
+      -webkit-border-radius: 0 5px 5px 0;
+      -moz-border-radius: 0 5px 5px 0;
+      border-radius: 0 5px 5px 0;
+      border-left: none;
+    }
+  }
+  &__show-more {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    background-color: #2196f3;
+    padding: 15px 20px;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: url('./assets/img/cursor.svg') auto;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    &:hover,
+    &:focus {
+      background-color: darken(#2196f3, 10%);
+    }
+  }
+}
