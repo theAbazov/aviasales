@@ -118,7 +118,7 @@ function App() {
               {!isLoading && ticketItems?.length ? (
                 ticketItems
               ) : (
-                <h1 style={{ textAlign: 'center' }}>Loading...</h1>
+                <span style={{ textAlign: 'center' }}>Loading...</span>
               )}
 
               {Array.isArray(ticketItems) && ticketItems.length % 5 === 0 ? (

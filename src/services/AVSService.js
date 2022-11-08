@@ -1,5 +1,4 @@
 const filter = (tickets, filters = []) => {
-  console.log(filters, 'ssssssssss');
   const res = tickets.filter((tick) =>
     tick.segments.every(({ stops }) =>
       filters.some((count) => +count === stops.length)
